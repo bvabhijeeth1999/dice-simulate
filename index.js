@@ -1,4 +1,5 @@
 document.querySelector(".b1").addEventListener("click",function(){
+  $(".b1").hide();
   var audio = new Audio("sounds/dice-sound.mp3");
   audio.play();
   var randomNumber1 = Math.floor(Math.random()*6)+1;
@@ -57,4 +58,7 @@ document.querySelector(".b1").addEventListener("click",function(){
       }
   }, 400);
   document.querySelector(".total").textContent = "Total is : " + total;
+  setTimeout(function(){
+    $(".b1").show();
+  }, 800);
 });
